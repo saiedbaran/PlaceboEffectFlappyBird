@@ -1,5 +1,10 @@
 {
   "dependencies": {
+    "com.gamelabgraz.userinterface": "https://github.com/GameLabGraz/Utilities.git#package/userinterface",
+    "com.gear.gadgets": "https://github.com/GameLabGraz/Utilities.git#package/gadgets",
+    "com.gear.languagemanager": "https://github.com/GameLabGraz/Utilities.git#package/languagemanager",
+    "com.gear.serializeproperty": "https://github.com/GameLabGraz/Utilities.git#package/serializeproperty",
+    "com.gamelabgraz.limesurveyuploader": "https://github.com/GameLabGraz/Utilities.git#package/limesurveyuploader",
     "com.unity.collab-proxy": "2.0.5",
     "com.unity.feature.2d": "2.0.0",
     "com.unity.ide.rider": "3.0.24",
