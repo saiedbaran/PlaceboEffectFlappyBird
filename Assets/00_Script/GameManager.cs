@@ -6,6 +6,9 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     
     [SerializeField] private GameObject gameOverCanvas;
+    [SerializeField] private GameStat gameStat;
+    [SerializeField] private float maxGameDuration = 10;
+    
 
     private void Awake()
     {
@@ -18,6 +21,17 @@ public class GameManager : MonoBehaviour
     {
         gameOverCanvas.SetActive(true);
         Time.timeScale = 0.0f;
+
+        gameStat.highScore = PlayerPrefs.GetInt("BestScore", 0);
+        gameStat.numberOfAttempt++;
+        gameStat.gameDuration += Time.timeSinceLevelLoad;
+
+        if (gameStat.gameDuration > maxGameDuration)
+        {
+            gameStat.ConvertToJson();
+            gameStat.Reset();
+            SceneManager.LoadScene("10_SurveyScene");
+        }
     }
 
     public void RestartGame()

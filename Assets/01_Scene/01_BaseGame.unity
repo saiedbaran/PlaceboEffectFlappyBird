@@ -2065,6 +2065,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverCanvas: {fileID: 1667559600}
+  gameStat: {fileID: 11400000, guid: d776e3ab6be4fa64988fed790457695f, type: 2}
+  maxGameDuration: 600
 --- !u!4 &2099886950
 Transform:
   m_ObjectHideFlags: 0
